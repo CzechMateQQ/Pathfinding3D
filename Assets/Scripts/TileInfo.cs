@@ -4,18 +4,26 @@ using UnityEngine;
 
 public class TileInfo : MonoBehaviour
 {
-    public int x = 0;
-    public int y = 0;
-    public int visited = -1;
-    private int fScore = 1;
+    [HideInInspector]
+    public int x, y = 0;
 
-    // Start is called before the first frame update
+    [HideInInspector]
+    public int visited = -1;    // -1 for unvisited, 0 for visited, 1 for closed
+
+    [HideInInspector]
+    public int fScore = 1;
+
+    [HideInInspector]
+    public int costSoFar = 0;
+
+    [HideInInspector]
+    public GameObject connection;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
